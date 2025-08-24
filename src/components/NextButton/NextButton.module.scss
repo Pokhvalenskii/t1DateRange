@@ -1,0 +1,13 @@
+.btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity .2s ease;
+  &:hover {
+    opacity: .7;
+  }
+  &:active {
+    opacity: .5;
+  }
+}

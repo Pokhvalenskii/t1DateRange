@@ -1,0 +1,111 @@
+.eventsContainer {
+  position: absolute;
+  top: 700px;
+  width: 100%;
+  padding: 0 78px;
+  //margin: 0 78px;
+  @media (width < 1440px) {
+    position: relative;
+    top: initial;
+    padding: 0 20px;
+  }
+}
+.swiperWrapper {
+  position: relative;
+}
+
+.swiper {
+  position: relative;
+  //padding: 0 40px;
+}
+
+.swiperButtonPrev,
+.swiperButtonNext {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  transition: opacity .2s ease;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .5;
+  }
+
+}
+
+.swiperButtonPrev {
+  left: -60px;
+}
+
+.swiperButtonNext {
+  right: -60px;
+}
+
+.swiperButtonPrev::after,
+.swiperButtonNext::after {
+  content: '';
+}
+
+.swiperButtonDisabled {
+  display: none;
+}
+
+.arrowContainer {
+  display: flex;
+}
+.arrow {
+
+  &_left {
+    transform: rotate(180deg);
+  }
+
+  &_right {
+  }
+}
+
+
+.pagination {
+  display: none;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (width < 1440px) {
+    display: flex;
+  }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #42567A;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
